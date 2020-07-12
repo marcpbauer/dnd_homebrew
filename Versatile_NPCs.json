@@ -1,0 +1,157 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "ver_npc",
+				"abbreviation": "V:NPC",
+				"full": "Versatile NPCs",
+				"authors": [
+					"u/dgscott",
+					"Darrin Scott"
+				],
+				"convertedBy": [
+					"Modnar"
+				],
+				"version": "1.0",
+				"url": "https://drive.google.com/file/d/0BwKOfP0lLMsLTUdrQkhIamVyZlU/view",
+				"targetSchema": "1.0.0"
+			}
+		],
+		"dateAdded": 1594562564,
+		"dateLastModified": 1594562564
+	},
+	"monster": [
+		{
+			"name": "Bastion",
+			"shortName": true,
+			"source": "ver_npc",
+			"page": "6",
+			"size": "M",
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|phb}",
+						"{@item shield|phb}"
+					]
+				},
+				{
+					"ac": 23,
+					"condition": "with Forward Defense",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "13d8 + 52",
+				"average": 110
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 18,
+			"int": 12,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"str": "+7",
+				"con": "+7"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+3"
+			},
+			"passive": 12,
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Brute",
+					"entries": [
+						"A melee weapon deals one extra die of its damage when the defender hits with it."
+					]
+				},
+				{
+					"name": "Shelter",
+					"entries": [
+						"Allies within 5 feet of the Bastion gain a +2 bonus to their AC, if the Bastion is not {@condition prone} or {@condition incapacitated}"
+					]
+				},
+				{
+					"name": "Shield Charge",
+					"entries": [
+						"If defender moves at least 10 ft. straight toward a target and then hits it with a {@item flail|phb} attack on the same turn, the target takes an extra 13 ({@damage 3d8}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The defender makes two weapon attacks."
+					]
+				},
+				{
+					"name": "Flail",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage in melee, or 11 ({@damage 2d6 + 4}) piercing damage at range."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Block",
+					"entries": [
+						"The Bastion adds +3 AC against an attack that would normally hit it. To do so, the bastion must see the attack and be wielding a shield"
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/YuKlFGU.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/zgV2ZVt.png",
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		}
+	]
+}
