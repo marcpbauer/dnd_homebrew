@@ -1,0 +1,422 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "ver_npc2",
+				"abbreviation": "V:NPC2",
+				"full": "Versatile NPCs II",
+				"authors": [
+					"u/dgscott",
+					"Darrin Scott"
+				],
+				"convertedBy": [
+					"Modnar"
+				],
+				"version": "1.0",
+				"url": "https://drive.google.com/file/d/0BwKOfP0lLMsLTUdrQkhIamVyZlU/view",
+				"targetSchema": "1.0.0"
+			}
+		],
+		"dateAdded": 1594563450,
+		"dateLastModified": 1594563450
+	},
+	"monster": [
+		{
+			"name": "Soldier",
+			"source": "ver_npc2",
+			"page": "57",
+			"size": "M",
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"athletics": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Martial Advantage",
+					"entries": [
+						"Once per turn, the soldier can deal an extra 7 ({@damage 2d6}) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the soldier that isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with both hands."
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Soldiers are individuals who compose a military fighting force.They are well - trained and disciplined.While the vast majority of soldiers serve in traditional armies, many heed the call of a mercenary’ s life.",
+									{
+										"name": "Sample Soldier",
+										"type": "entries",
+										"entries": [
+											"Ivlom knew that he and his comrades were on a doomed mission before they set out. He cursed the captain for considering using his soldiers in such a way– a unit of hobgoblins was formidable against enemy armies, but against a small and experienced team of experts, Ivlom knew his soldier’s usual tactics would work against them. Surely enough, Ivlom’s enemies had used their speed, magic, and terrain to out-maneuver and wreak havoc among the hobgoblins, which lacked the diversity of fighting types to counter the enemy moves. None of the hobgoblins survived but Ivlom and the captain, and Ivlom knew that it was time for a change in leadership."
+										]
+									},
+									{
+										"name": "Sample Soldier",
+										"type": "entries",
+										"entries": [
+											"The world blurred and warped before Sukriye’s eyes. The desert heat was becoming a more powerful foe than the one she and her company had fled. That day, they drank the last of their water, and several soldiers had already died of dehydration. Up ahead, Sukriye thought she could see some figures in the distance. It was probably a mirage or the heat exhaustion toying with Sukriye’s mind. Hope was a luxury she did not have."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/rSnpRMI.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/lDdQ31N.png",
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			]
+		},
+		{
+			"name": "Defender, Elite",
+			"shortName": "Defender",
+			"source": "ver_npc2",
+			"page": "16",
+			"size": "M",
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|phb}",
+						"{@item shield|phb}"
+					]
+				},
+				{
+					"ac": 23,
+					"condition": "with Forward Defense",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "16d8 + 64",
+				"average": 136
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 18,
+			"int": 12,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"str": "+7",
+				"con": "+7"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+3"
+			},
+			"passive": 12,
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Brute",
+					"entries": [
+						"A melee weapon deals one extra die of its damage when the defender hits with it."
+					]
+				},
+				{
+					"name": "Forward Defense",
+					"entries": [
+						"The defender has a +2 bonus to its AC against attacks so long as it can see the attacker and the attacker has no {@condition unconscious||conscious} allies within 5 feet of the defender."
+					]
+				},
+				{
+					"name": "Shield Charge",
+					"entries": [
+						"If defender moves at least 10 ft. straight toward a target and then hits it with a {@item flail|phb} attack on the same turn, the target takes an extra 13 ({@damage 3d8}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The defender makes two weapon attacks."
+					]
+				},
+				{
+					"name": "Flail",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage in melee, or 11 ({@damage 2d6 + 4}) piercing damage at range."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Intercept Attack",
+					"entries": [
+						"In response to another creature within 5 feet of it being hit by an attack roll, the defender gives that creature a +5 bonus against the attack, potentially causing it to miss. To use this ability, the defender must be able to see the creature and the attacker."
+					]
+				}
+			],
+			"fluff": {
+				"type": "entries",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Defenders are steadfast fighters that use their strength, shields, and heavy armor to hold off enemy attacks. With their defensive tactics, they often serve the role of guards or fight on the front lines of a battlefield formation. Other defenders may be gladiators or knights.",
+									{
+										"name": "Sample Defender NPC",
+										"type": "entries",
+										"entries": [
+											"The two bow-wielding guards protecting the dutchess did not intimidate the meddlers who stood before her in the private audience hall. The dutchess knew the meeting was likely a trap, but she was confident enough to attend anyways. The meddlers knew their trap had backfired as soon as they sprung it. Out came a behemoth of a man whom the duchess called “Jacre,” though in truth, the meddlers did not know if he was human. Standing over six and a half feet tall, clad in thick plate mail, and bearing a massive steel shield, he must have weighed over four hundred pounds. Jacre knew it was not his place to question what the meddlers might be doing. His ward, the duchess, was in danger, and having saved him from a life of slavery, he owed her everything. Onward Jacre rushed, rojectiles aimed for the dutchess deflected harmlessly by Jacre’s armor. The meddlers were so focused on the charging behemoth that they forgot about the archers, who opened fire on them. Jacre felt good about his odds in this battle, but even if they turned against him he would make sure the fight was not a short one; giving the duchess time to escape."
+										]
+									},
+									{
+										"name": "Sample Defender NPC",
+										"type": "entries",
+										"entries": [
+											"“Shields up!” the dwarven commander called across the ranks. The call came just as Bremorel and her comrades locked their great shields in a tight wall, deflecting the arrows harmlessly to the side. Something was driving these goblins to make nearly suicidal charges against the dwarven ranks; the clansfolk sent agents to investigate the force behind it. In the meantime, it was up to her and her soldiers to hold the line. The goblins rushed forward and broke upon Bremorel’s shield like a tide on a cliff. “Delzune, advance!” Bremorel grinned as she and her comrades moved forward in synchronicity, ready to crush all those before her."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/ShEKhGv.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/cKrPXav.png",
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Defender",
+			"source": "ver_npc2",
+			"page": "16",
+			"size": "M",
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|phb}"
+					]
+				},
+				{
+					"ac": 20,
+					"condition": "with Forward Defense",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "6d8 + 12",
+				"average": 39
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 9,
+			"passive": 10,
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Forward Defense",
+					"entries": [
+						"The defender has a +2 bonus to its AC against attacks so long as it can see the attacker and the attacker has no {@condition unconscious||conscious} allies within 5 feet of the defender."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, or 8 ({@damage 1d10 + 3}) bludgeoning damage if used with both hands."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage in melee, or 6 ({@damage 1d6 + 3}) piercing damage at range."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Intercept Attack",
+					"entries": [
+						"In response to another creature within 5 feet of it being hit by an attack roll, the defender gives that creature a +4 bonus against the attack, potentially causing it to miss. To use this ability, the defender must be able to see the creature and the attacker."
+					]
+				}
+			],
+			"fluff": {
+				"type": "entries",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Defenders are steadfast fighters that use their strength, shields, and heavy armor to hold off enemy attacks. With their defensive tactics, they often serve the role of guards or fight on the front lines of a battlefield formation. Other defenders may be gladiators or knights.",
+									{
+										"name": "Sample Defender NPC",
+										"type": "entries",
+										"entries": [
+											"The two bow-wielding guards protecting the dutchess did not intimidate the meddlers who stood before her in the private audience hall. The dutchess knew the meeting was likely a trap, but she was confident enough to attend anyways. The meddlers knew their trap had backfired as soon as they sprung it. Out came a behemoth of a man whom the duchess called “Jacre,” though in truth, the meddlers did not know if he was human. Standing over six and a half feet tall, clad in thick plate mail, and bearing a massive steel shield, he must have weighed over four hundred pounds. Jacre knew it was not his place to question what the meddlers might be doing. His ward, the duchess, was in danger, and having saved him from a life of slavery, he owed her everything. Onward Jacre rushed, rojectiles aimed for the dutchess deflected harmlessly by Jacre’s armor. The meddlers were so focused on the charging behemoth that they forgot about the archers, who opened fire on them. Jacre felt good about his odds in this battle, but even if they turned against him he would make sure the fight was not a short one; giving the duchess time to escape."
+										]
+									},
+									{
+										"name": "Sample Defender NPC",
+										"type": "entries",
+										"entries": [
+											"“Shields up!” the dwarven commander called across the ranks. The call came just as Bremorel and her comrades locked their great shields in a tight wall, deflecting the arrows harmlessly to the side. Something was driving these goblins to make nearly suicidal charges against the dwarven ranks; the clansfolk sent agents to investigate the force behind it. In the meantime, it was up to her and her soldiers to hold the line. The goblins rushed forward and broke upon Bremorel’s shield like a tide on a cliff. “Delzune, advance!” Bremorel grinned as she and her comrades moved forward in synchronicity, ready to crush all those before her."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/Bv22ZAC.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/v6Rwsr7.png",
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			]
+		}
+	]
+}
